@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        fieldset {
+            border: 2px solid #007bff;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #007bff;
+            font-size: 1.2em;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="password"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #007bff;
+            border-radius: 4px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        textarea {
+            border: 2px solid #007bff;
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 1em;
+            resize: vertical;
+        }
+
+        .form-footer {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/action_page.php" method="post">
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <label for="nomecomp">Nome Completo:</label>
+            <input type="text" id="nomecomp" name="nomecomp" placeholder="Digite seu nome" required>
+
+            <label for="email">Insira seu email:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+            <label for="data">Insira a Data:</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="senha">Insira sua senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+            <label for="tel">Insira seu telefone:</label>
+            <input type="tel" id="tel" name="tel" placeholder="Digite seu Telefone">
+        </fieldset>
+
+        <fieldset>
+            <legend>Complete o Cadastro</legend>
+            <label for="Pais">Escolha seu País:</label>
+            <select id="Pais" name="Pais" required>
+                <option value="Argentina">Argentina</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Chile">Chile</option>
+                <option value="Paraguai">Paraguai</option>
+            </select>
+
+            <label for="Generos">Gêneros:</label>
+            <input type="radio" id="Masculino" name="Genero" value="Masculino" required>
+            <label for="Masculino">Masculino</label><br>
+
+            <input type="radio" id="Feminino" name="Genero" value="Feminino" required>
+            <label for="Feminino">Feminino</label><br>
+
+            <input type="radio" id="Outros" name="Genero" value="Outros">
+            <label for="Outros">Outros</label><br><br>
+
+            <label for="Termos">Você aceita nossos termos de condição?</label><br>
+            <input type="checkbox" id="termos" name="termos" value="Aceitar" required>
+            <label for="termos"> Eu aceito os termos de condição.</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Deixe uma Mensagem</legend>
+            <label for="CaixaDeTexto">Insira sua mensagem:</label>
+            <textarea name="message" rows="6" cols="30"></textarea><br>
+
+            <div class="form-footer">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>     
